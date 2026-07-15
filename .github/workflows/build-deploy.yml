@@ -67,6 +67,8 @@ jobs:
       #   run: echo ${{ steps.docker_build.outputs.digest }}
 
   deploy:
+    environment:
+      name: production
     runs-on: ubuntu-latest
     needs: [build]
 
